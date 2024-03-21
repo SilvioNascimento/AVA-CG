@@ -2,8 +2,14 @@
 
 const Disciplinas = () => {
     return (
-        <div>
-            <h1>Disciplinas</h1>
+        <div className="Area-btns-disciplina">
+            <button>
+                <h1>Disciplina 1</h1>
+            </button>
+
+            <button>
+                <h1>Disciplina 2</h1>
+            </button>
         </div>
     );
 }
