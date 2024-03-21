@@ -10,6 +10,7 @@ import Login from './routes/Login/Login.jsx';
 import Disciplinas from './routes/Disciplinas/Disciplinas.jsx';
 import ErrorPage from './routes/Errors/ErrorPage.jsx';
 
+// Rotas
 const router = createBrowserRouter([
   {
     path: "/",
