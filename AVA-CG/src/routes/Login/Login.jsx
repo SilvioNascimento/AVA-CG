@@ -38,7 +38,7 @@ const Login = () => {
                 </div>
             </form>
             <div className="Area-Register-btn">
-                <Link to='/cadastro'>
+                <Link to='/Register'>
                     <button className="Register-btn">
                         É a sua primeira vez? Cadastre-se agora mesmo!
                     </button>
