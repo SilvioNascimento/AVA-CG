@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from './routes/Login/Login.jsx';
 import Disciplinas from './routes/Disciplinas/Disciplinas.jsx';
 import ErrorPage from './routes/Errors/ErrorPage.jsx';
+import Register from './routes/Register/Register.jsx';
 
 // Rotas
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Login />,
+      },
+      {
+        path: "/cadastro",
+        element: <Register />
       },
       {
         path: "/disciplinas",
