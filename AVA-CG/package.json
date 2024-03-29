@@ -3,8 +3,17 @@
     "dev": "vite"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react-router-dom": "^6.22.3",
     "vite": "^5.2.7"
+=======
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "run": "^1.5.0"
+>>>>>>> ff563e657d09b48ae51cb41c921ebe7f107165cb
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1"
