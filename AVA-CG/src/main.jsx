@@ -10,6 +10,7 @@ import Login from './routes/Login/Login.jsx';
 import Disciplinas from './routes/Disciplinas/Disciplinas.jsx';
 import ErrorPage from './routes/Errors/ErrorPage.jsx';
 import Register from './routes/Register/Register.jsx';
+import SistemasMultimidia from './routes/SistemasMultimidia/SistemasMultimidia.jsx';
 
 // Rotas
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/disciplinas",
         element: <Disciplinas />,
+      },
+      {
+        path: "/SistemasMultimidia",
+        element: <SistemasMultimidia />,
       }
     ]
   }
