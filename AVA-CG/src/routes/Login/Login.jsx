@@ -10,7 +10,7 @@ const Login = () => {
     const handleLoginClick = (e) => {
         e.preventDefault();
         // Verificação de email e senha padrão
-        if (email === "silvio.estudante19@gmail.com" && senha === "queromudar100") {
+        if (email === "teste@gmail.com" && senha === "teste100") {
             // Se as credenciais estiverem corretas, redirecione para a página de disciplinas
             navigate("/disciplinas");
         } else {
