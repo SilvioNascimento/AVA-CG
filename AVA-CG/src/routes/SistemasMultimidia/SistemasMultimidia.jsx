@@ -1,20 +1,33 @@
 import { useState } from "react";
+import PDFViewer from "../PDFViewer/PDFViewer";
+import { Link } from "react-router-dom";
 
 
 const SistemasMultimidia = () => {
 
     const [selectedButton, setSelectedButton] = useState(null);
+    const [pdfFilePath, setPdfFilePath] = useState(null);
+    
 
     const handleButtonClick = (buttonName) => {
-        setSelectedButton(buttonName === selectedButton ? null: buttonName);
+        setSelectedButton(buttonName === selectedButton ? null : buttonName);
+        // Define o caminho do arquivo PDF quando o botão "Leitor PDF" for clicado
+        if (buttonName === 'Leitor PDF') {
+            setPdfFilePath('./Rulebook_v9_pt.pdf');
+        } else {
+            setPdfFilePath(null); // Limpa o caminho do arquivo PDF quando outros botões forem clicados
+        }
     };
+
 
     const renderOptions = (buttonName) => {
         if(selectedButton === buttonName) {
             return (
                 <div className="Opcoes">
-                    <p>Assunto HTML</p>
-                    <p>Leitor PDF</p>
+                    <button>Assunto em Blog</button>
+                    <button onClick={() => handleButtonClick('Leitor PDF')}>Leitor PDF</button>
+                    
+
                 </div>
             );
         }
@@ -58,6 +71,8 @@ const SistemasMultimidia = () => {
             </button>
             {renderOptions('Continuacao-audio')}
 
+
+            {pdfFilePath && <PDFViewer filePath={pdfFilePath} />}
         </div>
     );
 }
