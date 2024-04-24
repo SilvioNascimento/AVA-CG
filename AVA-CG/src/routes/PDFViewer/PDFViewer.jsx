@@ -1,117 +1,39 @@
-// import React from 'react';
-// import { Document, Page } from 'react-pdf';
+import { Viewer, SpecialZoomLevel, PageChangeEvent } from '@react-pdf-viewer/core';
+import { Worker } from '@react-pdf-viewer/core';
+import { fullScreenPlugin } from '@react-pdf-viewer/full-screen';
 
-// class PDFViewer extends React.Component {
-//   state = {
-//     numPages: null,
-//     pageNumber: 1,
-//   };
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/full-screen/lib/styles/index.css';
 
-//   onDocumentLoadSuccess = ({ numPages }) => {
-//     this.setState({ numPages });
-//   };
+function PDFViewer () {
+    const fullScreenPluginInstance = fullScreenPlugin();
+    const { EnterFullScreenButton } = fullScreenPluginInstance;
 
-//   render() {
-//     const { pageNumber, numPages } = this.state;
-//     const { filePath } = this.props;
-
-//     return (
-//       <div>
-//         <Document
-//           file={filePath} // Caminho do arquivo PDF
-//           onLoadSuccess={this.onDocumentLoadSuccess}
-//         >
-//           <Page pageNumber={pageNumber} />
-//         </Document>
-//         <p>
-//           Page {pageNumber} of {numPages}
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-
-// export default PDFViewer;
-
-
-// import React from 'react';
-// import {useState} from 'react';
-// import {Document, Page} from 'react-pdf';
-// import pdfFile from '../Rulebook_v9_pt.pdf';
-
-// function PDFViewer() {
-//     const [numPages, setNumPages] = useState(null)
-//     function onDocumentSuccess({numPages}) {
-//         setNumPages(numPages)
-//     }
-
-//     return(
-//         <div style={{display: "flex", justifyContent: "center"}}>
-//             <div style={{width:"700px", border: "3px solid gray"}}>
-//                 <Document file={pdfFile} onLoadSuccess={onDocumentSuccess}>
-//                     {
-//                         Array(numPages).fill().map((_, i) => (
-//                             <Page pageNumber={i+1}></Page>
-//                         ))
-//                     }
-//                 </Document>
-
-//             </div>
-
-//         </div>
-//     );
-// }
-
-// export default PDFViewer;
-
-
-// import React, {Component} from 'react';
-
-// class PDFViewer extends Component {
-//     render() {
-//         return (
-//             <div style={{position:'absolute', width:'100%', height:'100%'}}>
-//                 <object 
-//                 data={require('./Rulebook_v9_pt.pdf')}
-//                 type="application/pdf"
-//                 width='100%'
-//                 height='100%'
-//                 >
-
-//                 </object>
-//             </div>
-//         );
-//     }
-// }
-// export default PDFViewer;
-
-// import React, { useState } from 'react';
-// import { Document, Page, pdfjs } from 'react-pdf';
-// import pdfjsWorker from '/pdfjs-dist/build/pdf.worker.min.js'; // Importe o worker do PDF.js
-
-// // Configure o caminho para o worker do PDF.js
-// pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
-
-function PDFViewer({ filePath }) {
-    const [numPages, setNumPages] = useState(null);
-
-    function onDocumentSuccess({ numPages }) {
-        setNumPages(numPages);
-    }
+    const handlePageChange = (e) => {
+        localStorage.setItem('current-page', `${e.currentPage}`);
+    };
 
     return (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-            <div style={{ width: "700px", border: "3px solid gray" }}>
-                <Document file={filePath} onLoadSuccess={onDocumentSuccess}>
-                    {
-                        Array.from(new Array(numPages), (el, index) => (
-                            <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-                        ))
-                    }
-                </Document>
-            </div>
-        </div>
-    );
-}
+  
+      <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+  
+      <div
+              style={{
+                  border: '1px solid rgba(0, 0, 0, 0.3)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '750px',
+                  width: '550px'
+              }}
+          >
+        <Viewer fileUrl="./projetoBatalhaNaval.pdf" defaultScale={SpecialZoomLevel.PageFit} onPageChange={handlePageChange} plugins={[fullScreenPluginInstance]} />
+      </div>
+      <EnterFullScreenButton />
+      </Worker>
+  
+  
+      
+    )
+  }
 
 export default PDFViewer;
