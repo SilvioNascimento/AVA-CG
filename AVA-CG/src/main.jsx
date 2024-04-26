@@ -13,6 +13,7 @@ import ErrorPage from './routes/Errors/ErrorPage.jsx';
 import Register from './routes/Register/Register.jsx';
 import SistemasMultimidia from './routes/SistemasMultimidia/SistemasMultimidia.jsx';
 import PDFViewer from './routes/PDFViewer/PDFViewer.jsx';
+import PDFViewer2 from './routes/PDFViewer/PDFViewer2.jsx';
 
 
 
@@ -44,7 +45,11 @@ const router = createBrowserRouter([
        {
          path:'/PDFViewer',
          element: <PDFViewer />
-       }
+       },
+       {
+        path:'/PDFViewer2',
+        element: <PDFViewer2 />
+      }
     ]
   }
 ])
