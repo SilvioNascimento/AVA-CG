@@ -1,0 +1,155 @@
+.Area-Login {
+    display: flex;           /* Define o layout flexível para o container */
+    justify-content: center; /* Centraliza os itens no eixo principal (horizontal, se o flex-direction é row) */
+    align-items: center;     /* Centraliza os itens no eixo cruzado (vertical, se o flex-direction é row) */
+    height: 100%;         /* Defina a altura do container de login para preencher a tela */
+}
+
+.Conteúdo1 {
+    padding-top: 80px;
+}
+
+.area-esquerda {
+    background-color: #215DF9;
+    height: 540px;
+    width: 296px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/* Estilos adicionais para imagem para garantir que ela não ultrapasse seu container */
+.imagem1 img {
+    width: 108px;
+    height: 80px;
+    padding-bottom: 15px;
+}
+
+.Entrar, .Bem-Vindo {
+    font-family: Poppins;
+    font-weight: bold;
+    
+}
+
+.Entrar h5{
+    color: #215DF9;
+    text-align: left;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.Bem-Vindo h5{
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.Bem-Vindo p {
+    color: #FFFFFF; 
+    font-size: 18px;
+}
+
+.area-direita {
+    background-color: #ffffff;
+    height: 540px;
+    width: 578px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.login-Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginInput {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border: 0px solid;
+    background-color: #D9D9D9;
+    height: 25px;
+    width: 100%;
+
+}
+
+.login-btn {
+    padding-top: 60px;
+}
+
+.login-btn b {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.login-btn button {
+    width: 168px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.login-btn button:hover {
+    width: 168px;
+    height: 59px;
+    border: none;
+    color: #ffffff;
+    background-color: #215DF9;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+
+
+.Conteúdo2 {
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+}
+
+.Area-Register-btn {
+    text-align: left;
+    padding-top: 60px;
+}
+
+.Area-Register-btn p {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 20px;
+    color: #215DF9;
+}
+
+.Area-Register-btn button {
+    margin-left: 7px;
+    font-weight: 700;
+    font-size: 20px;
+    width: 149px;
+    height: 34px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.Area-Register-btn button:hover {
+    margin-left: 7px;
+    font-weight: 700;
+    font-size: 20px;
+    width: 149px;
+    height: 34px;
+    border: none;
+    color: #ffffff;
+    background-color: #215DF9;
+    border-radius: 16px;
+    cursor: pointer;
+}
