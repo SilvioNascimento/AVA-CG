@@ -1,20 +1,29 @@
 import { useState } from "react";
+import PDFViewer from "../PDFViewer/PDFViewer";
+import { Link } from "react-router-dom";
 
 
 const SistemasMultimidia = () => {
 
     const [selectedButton, setSelectedButton] = useState(null);
+    
 
     const handleButtonClick = (buttonName) => {
-        setSelectedButton(buttonName === selectedButton ? null: buttonName);
+        setSelectedButton(buttonName === selectedButton ? null : buttonName);
     };
+
 
     const renderOptions = (buttonName) => {
         if(selectedButton === buttonName) {
             return (
                 <div className="Opcoes">
-                    <p>Assunto HTML</p>
-                    <p>Leitor PDF</p>
+                    <button>Assunto em Blog</button>
+                    <Link to='/PDFViewer'>
+                        <button>Leitor PDF</button>
+                    </Link>
+                    
+                    
+
                 </div>
             );
         }
@@ -57,7 +66,6 @@ const SistemasMultimidia = () => {
                 Continuação - Áudio
             </button>
             {renderOptions('Continuacao-audio')}
-
         </div>
     );
 }
