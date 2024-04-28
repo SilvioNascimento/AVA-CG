@@ -1,0 +1,125 @@
+.Area-Register-e-Login {
+    display: flex;           /* Define o layout flexível para o container */
+    justify-content: center; /* Centraliza os itens no eixo principal (horizontal, se o flex-direction é row) */
+    align-items: center;     /* Centraliza os itens no eixo cruzado (vertical, se o flex-direction é row) */
+    height: 100%;         /* Defina a altura do container de login para preencher a tela */
+}
+
+.Area-login {
+    background-color: #215DF9;
+    height: 540px;
+    width: 296px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.Area-Register {
+    background-color: #ffffff;
+    height: 540px;
+    width: 578px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.imagem2 img {
+    padding-top: 60px;
+    width: 108px;
+    height: 80px;
+    padding-bottom: 15px;
+}
+
+.Conteúdo {
+    padding-top: 90px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 90px;
+}
+
+.register-Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-Input {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 0px solid;
+    background-color: #D9D9D9;
+    height: 25px;
+    width: 100%;
+}
+
+.Register {
+    color: #215DF9;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.bem-vindo {
+    margin-top: 30px;
+    font-family: Poppins;
+    color: #ffffff;
+}
+
+.bem-vindo b {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.back-btn button {
+    margin-top: 20px;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 28px;
+    width: 168px;
+    height: 59px;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    background-color: #215DF9;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.back-btn button:hover {
+    margin-top: 20px;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 28px;
+    width: 168px;
+    height: 59px;
+    border: 3px solid #ffffff;
+    color: #215DF9;
+    background-color: #ffffff;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.register-btn button {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 168px;
+    height: 59px;
+    border: none;
+    color: #ffffff;
+    background-color: #215DF9;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.register-btn button:hover {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 168px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #ffffff;
+    border-radius: 16px;
+    cursor: pointer;
+}
