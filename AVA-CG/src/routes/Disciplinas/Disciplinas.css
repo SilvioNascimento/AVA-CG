@@ -1,0 +1,84 @@
+.Area-btns-disciplinas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    padding: 20px; /* Espaçamento ao redor dos botões */
+    background-color: #215DF9;
+    border-radius: 10px;
+    height: 500px;
+    width: 900px;
+    
+}
+
+.Area-btns-disciplinas b{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: -20px;
+    margin-bottom: 0px;
+    color: #ffffff;
+}
+
+.btns-disciplinas {
+    display: flex;
+    flex-direction: row; /* Organiza os botões em uma linha */
+    flex-wrap: wrap; /* Permite a quebra de linha */
+    gap: 30px; /* Espaço entre os botões */
+    justify-content: center;
+}
+
+.btns-disciplinas button  {
+    background-color: #ffffff;
+    color: #B5B5B5;
+    width: 396px;
+    height: 102px;
+    left: 64px;
+    gap: 0px;
+    opacity: 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.btns-disciplinas button:hover {
+    background-color: #B5B5B5;
+    width: 396px;
+    height: 102px;
+    left: 64px;
+    gap: 0px;
+    opacity: 0px;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-Sistemas-Multimidia h1,
+.btn-Matemática h1,
+.btn-Português h1,
+.btn-Física  h1{
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+    ;
+
+}
+
+/* .btns-disciplinas button {
+    flex: 1 1 calc(50% - 20px); /* Configura o botão para ocupar metade da largura do contêiner menos o espaçamento */
+    /* min-height: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+    border: none; 
+    background: #f0f0f0;
+    cursor: pointer; */
+/* } */
+
+/* .btns-disciplinas button h1 {
+    margin: 0; /* Remove margens padrão do h1 */
+    /* text-align: center; Alinha o texto ao centro */
+/* } */ 
