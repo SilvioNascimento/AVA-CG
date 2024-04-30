@@ -60,6 +60,7 @@ import { fullScreenPlugin } from '@react-pdf-viewer/full-screen';
 import { getFilePlugin } from '@react-pdf-viewer/get-file';
 import { propertiesPlugin } from '@react-pdf-viewer/properties';
 import { pageNavigationPlugin } from '@react-pdf-viewer/page-navigation';
+import { thumbnailPlugin } from '@react-pdf-viewer/thumbnail';
 
 // Import styles
 import '@react-pdf-viewer/properties/lib/styles/index.css';
@@ -67,14 +68,18 @@ import '@react-pdf-viewer/toolbar/lib/styles/index.css';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/full-screen/lib/styles/index.css';
 import '@react-pdf-viewer/page-navigation/lib/styles/index.css';
+import '@react-pdf-viewer/thumbnail/lib/styles/index.css';
 
 function PDFViewer2() {
 
-    const [sidebarVisible, setSidebarVisible] = useState(false);
+    const [sidebarVisible, setSidebarVisible] = useState(true);
     const toggleSidebar = () => setSidebarVisible(!sidebarVisible);
 
     const toolbarPluginInstance = toolbarPlugin();
     const {Toolbar} = toolbarPluginInstance;
+
+    const thumbnailPluginInstance = thumbnailPlugin(); 
+    const { Thumbnails } = thumbnailPluginInstance;
 
     const pageNavigationPluginInstance = pageNavigationPlugin();
     const { CurrentPageLabel } = pageNavigationPluginInstance;
@@ -105,7 +110,7 @@ function PDFViewer2() {
                         padding: '10px'
                     }}>
                         {/* Contente da sidebar aqui */}
-                        Sidebar content here
+                        <Thumbnails/>
                     </div>
                 )}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column'  }}>
@@ -157,7 +162,7 @@ function PDFViewer2() {
                             defaultScale={SpecialZoomLevel.PageFit}
                             pageLayout={pageLayout}
                             plugins={[toolbarPluginInstance, fullScreenPluginInstance, filePluginInstance,
-                                propertiesPluginInstance, pageNavigationPluginInstance]}
+                                propertiesPluginInstance, pageNavigationPluginInstance, thumbnailPluginInstance]}
                         />
                     </div>
                 </div>
