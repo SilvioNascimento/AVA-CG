@@ -103,16 +103,6 @@ function PDFViewer2() {
         
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
             <div style={{ display: 'flex', height: '100vh' }}>
-                {sidebarVisible && (
-                    <div style={{
-                        width: '250px',
-                        background: '#f0f0f0',
-                        padding: '10px'
-                    }}>
-                        {/* Contente da sidebar aqui */}
-                        <Thumbnails/>
-                    </div>
-                )}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column'  }}>
                     
                     <div style={{ position: 'sticky', top: 0, zIndex: 100, backgroundColor: '#d9dfe2', width:'100%'}}>
@@ -155,16 +145,31 @@ function PDFViewer2() {
                             )}
                         </Toolbar>
                     </div>
-                    
-                    <div style={{width: '950px', overflow:'auto'}}>
-                        <Viewer 
-                            fileUrl="./Aula 08 - ImagemII.pdf"
-                            defaultScale={SpecialZoomLevel.PageFit}
-                            pageLayout={pageLayout}
-                            plugins={[toolbarPluginInstance, fullScreenPluginInstance, filePluginInstance,
-                                propertiesPluginInstance, pageNavigationPluginInstance, thumbnailPluginInstance]}
-                        />
+                    <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+                        {sidebarVisible && (
+                            <div style={{
+                                width: '250px',
+                                background: '#f0f0f0',
+                                padding: '10px'
+                            }}>
+                                {/* Contente da sidebar aqui */}
+                                <Thumbnails/>
+                            </div>
+                        )}
+                            <div style={{width: '950px', overflow:'auto'}}>
+                                <Viewer 
+                                    fileUrl="./Aula 08 - ImagemII.pdf"
+                                    defaultScale={SpecialZoomLevel.PageFit}
+                                    pageLayout={pageLayout}
+                                    plugins={[toolbarPluginInstance, fullScreenPluginInstance, filePluginInstance,
+                                        propertiesPluginInstance, pageNavigationPluginInstance, thumbnailPluginInstance]}
+                                />
+                            </div>
+
                     </div>
+                    
+                    
+                    
                 </div>
             </div>
         </Worker>
@@ -173,7 +178,6 @@ function PDFViewer2() {
 }
 
 export default PDFViewer2;
-
 
 
 // import React from 'react';
