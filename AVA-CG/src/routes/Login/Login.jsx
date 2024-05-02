@@ -17,22 +17,13 @@ const Login = () => {
             // Verificar se a senha inserida corresponde à senha armazenada
             if (senha === userData.senha) {
                 // Se as credenciais estiverem corretas, redirecione para a página desejada
-                navigate("/disciplinas");
+                navigate("/Disciplinas");
             } else {
                 alert("Senha incorreta. Por favor, tente novamente.");
             }
         } else {
             alert("Usuário não cadastrado. Por favor, verifique seu email ou cadastre-se.");
         }
-
-        // Verificação de email e senha padrão
-        // if (email === "teste@gmail.com" && senha === "teste100") {
-        //     // Se as credenciais estiverem corretas, redirecione para a página de disciplinas
-        //     navigate("/disciplinas");
-        // } else {
-        //     // Caso contrário, exiba uma mensagem de erro ou realize outra ação desejada
-        //     alert("Credenciais inválidas. Por favor, tente novamente.");
-        // }
     }
 
     return (
