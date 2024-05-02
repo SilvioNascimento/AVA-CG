@@ -11,6 +11,26 @@
     
 }
 
+.Area-btns-config1 button {
+    margin-top: 20px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    width: 168px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.Area-btns-config1 button:hover {
+    color: #fff;
+    background-color: #215DF9;
+}
+
 .Area-btns-disciplinas b{
     font-family: Poppins;
     font-size: 32px;
@@ -65,20 +85,3 @@
     ;
 
 }
-
-/* .btns-disciplinas button {
-    flex: 1 1 calc(50% - 20px); /* Configura o botão para ocupar metade da largura do contêiner menos o espaçamento */
-    /* min-height: 100px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; 
-    border: none; 
-    background: #f0f0f0;
-    cursor: pointer; */
-/* } */
-
-/* .btns-disciplinas button h1 {
-    margin: 0; /* Remove margens padrão do h1 */
-    /* text-align: center; Alinha o texto ao centro */
-/* } */ 
