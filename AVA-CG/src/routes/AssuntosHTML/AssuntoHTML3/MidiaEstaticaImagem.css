@@ -1,0 +1,99 @@
+.Area-Conteudo3 {
+    background-color: #fff;
+    width: 950px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #215DF9;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    margin-bottom: 40px;
+}
+
+article h2 {
+    color: #333;
+    padding-bottom: 15px;
+}
+
+article p {
+    color: #666;
+    text-align: justify;
+}
+
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.Final {
+    padding-bottom: 20px;
+}
+
+.Area-btns-Midia-Estatica {
+    display: flex;
+    justify-content: space-between; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Alinha os elementos verticalmente */
+    padding: 10px;
+}
+
+.PDF-Teoria-das-Cores, .PDF-Midia {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    width: 350px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto dentro do botão */
+
+}
+
+.Voltar-de-Midia {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    width: 168px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.PDF-Teoria-das-Cores:hover, .PDF-Midia:hover, .Voltar-de-Midia:hover {
+    color: #ffffff;
+    background-color: #215DF9;
+}
