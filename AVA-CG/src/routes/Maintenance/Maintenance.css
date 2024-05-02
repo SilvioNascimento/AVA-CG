@@ -1,0 +1,58 @@
+.Area-Maintencance {
+    display: flex;           
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; /* Organiza o conteúdo em colunas */
+    height: 100vh;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: -100px;
+  }
+  
+  .gear {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 10px solid #333;
+    border-top-color: transparent;
+    animation: rotate 1s linear infinite;
+  }
+  
+  .text {
+    font-family: Verdana;
+    position: absolute;
+    bottom: 180px;
+    font-size: 30px;
+    color: #333;
+  }
+
+  .btn-voltar-disciplinas {
+    width: 208px;
+    height: 60px;
+    font-size: 24px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .btn-voltar-disciplinas:hover {
+    color: #fff;
+    background-color: #215DF9;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
