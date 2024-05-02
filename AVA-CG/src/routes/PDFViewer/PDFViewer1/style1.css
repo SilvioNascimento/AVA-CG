@@ -1,0 +1,70 @@
+.sidebar-toggle-button1 {
+    background-color: #d9dfe2; /* Cor de fundo do botão */
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer; /* Cursor de clique */
+    padding: 0.5rem; /* Espaçamento interno para tornar o botão maior */
+    display: flex; /* Usando flex para alinhar texto e ícone */
+    align-items: center; /* Alinha o ícone e o texto verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    height: 2rem;
+    margin-left: 10px;
+  }
+
+.sidebar-toggle-button1:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+  
+  
+.button-icon {
+    background-image: url('./public/Fonte_de_ícone_de_menu-hambúrguer.png'); /* Substitua pelo caminho real da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra o espaço disponível */
+    width: 14px; /* Largura da imagem no botão */
+    height: 14px; /* Altura da imagem no botão */
+}
+
+.Area-btn-SistemasMultimidia1 {
+    display: flex;
+    justify-content: space-between; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Alinha os elementos verticalmente */
+    padding-top: 25px;
+}
+
+.btn-back {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    width: 168px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.btn-Introducao, .btn-Teoria-das-Cores {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    width: 300px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    margin-left: auto; /* Mantém o botão à direita */
+}
+
+.btn-Introducao:hover, .btn-back:hover, .btn-Teoria-das-Cores:hover {
+    color: #ffffff;
+    background-color: #215DF9;
+}
+
+.toolbar-container1 {
+    background-color: #d9dfe2;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
