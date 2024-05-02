@@ -51,6 +51,9 @@ function PDFViewer3() {
     const propertiesPluginInstance = propertiesPlugin();
     const {ShowPropertiesButton} = propertiesPluginInstance;
 
+    const [pdfFile, setPdfFile] = useState('./Mídia Estática_Imagem.pdf');
+    const pdfFileName = pdfFile.split('/').pop();
+
     const pageLayout = {
         transformSize: ({ size }) => ({ height: size.height + 15, width: size.width + 15}),
     };
@@ -76,12 +79,16 @@ function PDFViewer3() {
                                         <button onClick={toggleSidebar} className="sidebar-toggle-button">
                                             <span className="button-icon"></span>
                                         </button>
+
+                                        <span style={{ marginLeft: '-260px' }}>{pdfFileName}</span>
+
                                         <div style={{
                                             alignItems: 'center',
                                             display: 'flex',
                                             justifyContent: 'center',
                                             padding: '4px',
                                         }}>
+                                            
                                             <CurrentPageLabel>
                                                 {({ currentPage, numberOfPages }) => (
                                                     <span>
@@ -155,7 +162,7 @@ function PDFViewer3() {
                             </button>
                         </Link> 
 
-                        <Link to='/Midia-Dinamica-Video-E-Audio'>
+                        <Link to='/Midia-Dinamica_Video-E-Audio'>
                             <button className='btn-Midia-Dinamica'>
                                 Mídia Dinâmica - Vídeo e Áudio
                             </button>

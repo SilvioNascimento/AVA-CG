@@ -51,10 +51,12 @@ function PDFViewer4() {
     const propertiesPluginInstance = propertiesPlugin();
     const {ShowPropertiesButton} = propertiesPluginInstance;
 
+    const [pdfFile, setPdfFile] = useState('./Mídia Dinâmica_Vídeo e Áudio.pdf');
+    const pdfFileName = pdfFile.split('/').pop();
+
     const pageLayout = {
         transformSize: ({ size }) => ({ height: size.height + 15, width: size.width + 15}),
     };
-
 
     return (
 
@@ -76,6 +78,9 @@ function PDFViewer4() {
                                         <button onClick={toggleSidebar} className="sidebar-toggle-button">
                                             <span className="button-icon"></span>
                                         </button>
+
+                                        <span style={{ marginLeft: '-230px' }}>{pdfFileName}</span>
+
                                         <div style={{
                                             alignItems: 'center',
                                             display: 'flex',
@@ -144,7 +149,7 @@ function PDFViewer4() {
                     </div>
                     <div className='Area-btn-SistemasMultimidia4'>
                         
-                        <Link to='/Midia-Dinamica-Video-E-Audio'>
+                        <Link to='/Midia-Dinamica_Video-E-Audio'>
                             <button className='btn-Midia-DinamicaA'>
                                 Mídia Dinâmica - Vídeo e Áudio
                             </button>

@@ -51,6 +51,9 @@ function PDFViewer2() {
     const propertiesPluginInstance = propertiesPlugin();
     const {ShowPropertiesButton} = propertiesPluginInstance;
 
+    const [pdfFile, setPdfFile] = useState('./Teoria das Cores.pdf');
+    const pdfFileName = pdfFile.split('/').pop();
+
     const pageLayout = {
         transformSize: ({ size }) => ({ height: size.height + 15, width: size.width + 15}),
     };
@@ -76,6 +79,9 @@ function PDFViewer2() {
                                         <button onClick={toggleSidebar} className="sidebar-toggle-button">
                                             <span className="button-icon"></span>
                                         </button>
+
+                                        <span style={{ marginLeft: '-280px' }}>{pdfFileName}</span>
+
                                         <div style={{
                                             alignItems: 'center',
                                             display: 'flex',

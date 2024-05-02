@@ -50,6 +50,9 @@ function PDFViewer1() {
     const propertiesPluginInstance = propertiesPlugin();
     const {ShowPropertiesButton} = propertiesPluginInstance;
 
+    const [pdfFile, setPdfFile] = useState('./Introdução aos Conceitos.pdf');
+    const pdfFileName = pdfFile.split('/').pop();
+
     const pageLayout = {
         transformSize: ({ size }) => ({ height: size.height + 15, width: size.width + 15}),
     };
@@ -75,6 +78,9 @@ function PDFViewer1() {
                                         <button onClick={toggleSidebar} className="sidebar-toggle-button1">
                                             <span className="button-icon"></span>
                                         </button>
+                                        
+                                        <span style={{ marginLeft: '-260px' }}>{pdfFileName}</span>
+
                                         <div style={{
                                             alignItems: 'center',
                                             display: 'flex',
