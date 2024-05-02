@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         element: <MidiaEstaticaImagem />
        },
        {
-        path:'/Midia-Dinamica-Video-E-Audio',
+        path:'/Midia-Dinamica_Video-E-Audio',
         element: <MidiaDinamicaVideoEAudio/>
        },
        {
