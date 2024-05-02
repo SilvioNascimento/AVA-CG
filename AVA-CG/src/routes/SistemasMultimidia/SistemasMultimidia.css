@@ -1,0 +1,140 @@
+.Area-Sistemas-Multimidia {
+    display: flex;           /* Define o layout flexível para o container */
+    justify-content: center; /* Centraliza os itens no eixo principal (horizontal, se o flex-direction é row) */
+    align-items: center;     /* Centraliza os itens no eixo cruzado (vertical, se o flex-direction é row) */
+    height: 100%; 
+}
+
+.Area-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #215DF9;
+    height: 540px;
+    width: 296px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.assunto {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+}
+
+.Area-btns button {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #ffffff;
+    color: #B5B5B5;
+    width: 240px;
+    height: 70px;
+    border-radius: 10px;
+    border: none;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.Area-btns button:hover {
+    
+    background-color: #B5B5B5;
+    color: #D9D9D9;
+    border: 3px solid #ffffff;
+}
+
+.Area-opcoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Isso irá ajudar a centralizar o conteúdo verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #ffffff;
+    height: 540px;
+    width: 578px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.Area-btns-opcoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -30px;
+}
+
+.HTML {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 30px;
+    color: #215DF9;
+    background-color: #ffffff;
+    border: 3px solid #215DF9;
+    border-radius: 10px;
+    width: 400px;
+    height: 80px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+
+.Leitor-PDF {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 30px;
+    color: #215DF9;
+    background-color: #ffffff;
+    border: 3px solid #215DF9;
+    border-radius: 10px;
+    width: 400px;
+    height: 80px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+.HTML:hover, .Leitor-PDF:hover {
+    color: #ffffff;
+    background-color: #215DF9;
+}
+
+.Area-opcoes .texto-opcoes {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #215DF9;
+    text-align: center;
+    
+    width: 100%;
+}
+
+.Area-btns-config {
+    display: flex;
+    justify-content: space-between;  /* Alinha um item à esquerda e outro à direita */
+    align-items: center;             /* Centraliza os botões verticalmente */
+    padding: 0 20px;                 /* Adiciona um pouco de espaço nas laterais */
+    width: 100%; 
+}
+
+.Area-btns-config button {
+    margin-top: 20px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    width: 168px;
+    height: 59px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.Area-btns-config button:hover {
+    color: #fff;
+    background-color: #215DF9;
+}
