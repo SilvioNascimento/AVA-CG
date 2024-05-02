@@ -1,0 +1,24 @@
+.Area-Error {
+    margin-top: -75px;
+}
+
+.Area-Error h1 {
+    margin-top: -15px;
+}
+
+.btn-para-login {
+    width: 208px;
+    height: 60px;
+    font-size: 24px;
+    border: 3px solid #215DF9;
+    color: #215DF9;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-para-login:hover {
+    color: #ffffff;
+    background-color: #215DF9;
+}
