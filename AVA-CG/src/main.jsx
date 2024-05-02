@@ -10,10 +10,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from './routes/Login/Login.jsx';
 import Disciplinas from './routes/Disciplinas/Disciplinas.jsx';
 import ErrorPage from './routes/Errors/ErrorPage.jsx';
+import Maintenance from './routes/Maintenance/Maintenance.jsx'
 import Register from './routes/Register/Register.jsx';
 import SistemasMultimidia from './routes/SistemasMultimidia/SistemasMultimidia.jsx';
-import PDFViewer from './routes/PDFViewer/PDFViewer.jsx';
-import PDFViewer2 from './routes/PDFViewer/PDFViewer2.jsx';
+import PDFViewer1 from './routes/PDFViewer/PDFViewer1/PDFViewer1.jsx';
+import PDFViewer2 from './routes/PDFViewer/PDFViewer2/PDFViewer2.jsx';
+import PDFViewer3 from './routes/PDFViewer/PDFViewer3/PDFViewer3.jsx';
+import PDFViewer4 from './routes/PDFViewer/PDFViewer4/PDFViewer4.jsx';
+import IntroducaoAosConceitos from './routes/AssuntosHTML/AssuntoHTML1/IntroducaoAosConceitos.jsx';
+import TeoriaDasCores from './routes/AssuntosHTML/AssuntoHTML2/TeoriaDasCores.jsx';
+import MidiaEstaticaImagem from './routes/AssuntosHTML/AssuntoHTML3/MidiaEstaticaImagem.jsx';
+import MidiaDinamicaVideoEAudio from './routes/AssuntosHTML/AssuntoHTML4/MidiaDinamicaVideoEAudio.jsx';
 
 
 
@@ -22,8 +29,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-
-    //3 - Página de erro
     errorElement: <ErrorPage />,
     children: [
       {
@@ -35,7 +40,7 @@ const router = createBrowserRouter([
         element: <Register />
       },
       {
-        path: "/disciplinas",
+        path: "/Disciplinas",
         element: <Disciplinas />,
       },
       {
@@ -43,12 +48,40 @@ const router = createBrowserRouter([
         element: <SistemasMultimidia />,
        },
        {
-         path:'/PDFViewer',
-         element: <PDFViewer />
+        path:"/Introducao-aos-Conceitos",
+        element: <IntroducaoAosConceitos/>
        },
        {
-        path:'/PDFViewer2',
-        element: <PDFViewer2 />
+        path:'/Teoria-das-Cores',
+        element: <TeoriaDasCores/>
+       },
+       {
+        path:'/Midia-Estatica_Imagem',
+        element: <MidiaEstaticaImagem />
+       },
+       {
+        path:'/Midia-Dinamica-Video-E-Audio',
+        element: <MidiaDinamicaVideoEAudio/>
+       },
+       {
+        path:'/PDFViewer=Introducao-aos-Conceitos',
+        element: <PDFViewer1 />
+      },
+      {
+        path:'/PDFViewer=Teoria-das-Cores',
+        element: <PDFViewer2/>
+      },
+      {
+        path:'/PDFViewer=Mídia-Estática_Imagem',
+        element: <PDFViewer3/>
+      },
+      {
+        path:'/PDFViewer=Midia-Dinamica_Video-E-Audio',
+        element: <PDFViewer4/>
+      }, 
+      {
+        path:'/Maintenance',
+        element: <Maintenance />
       }
     ]
   }
